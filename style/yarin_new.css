@@ -1,0 +1,50 @@
+* {
+      box-sizing: border-box;
+      }
+
+
+
+#logo{
+animation: myAnim 4s ease-out 0s 1 normal both;
+  }
+  @keyframes myAnim {
+  	0% {
+  		transform: scale(0);
+  	}
+
+  	100% {
+  		transform: scale(1);
+  	}
+  }
+   /* cotert id*/
+#h22{
+color:#556B2F
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.browser>p{
+  margin: 4px;
+  font-size: 40%;
+}
+
+nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333333; /* dark gray */
+        color: #ffffff; /* white */
+        padding: 20px 20px;
+      }
+
+      nav a {
+        color: #ffffff; /* white */
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+body {
+  font-family: "tahoma", sans-sertf;
+}
