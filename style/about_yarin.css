@@ -5,15 +5,13 @@
 
 
       body {
-        background-image: url("e9f6b754-e5fd-4621-b1fb-6f4c38bab50e.jpg");
+        background-image: url("bgdesert.jpg");
       }
 
 
-body {
-      background-image: url("e9f6b754-e5fd-4621-b1fb-6f4c38bab50e.jpg");
-      background-repeat:no-repeat;
-    }
-
+      *{
+        font-family: 'Rubik', sans-serif;
+      }
 
 
 

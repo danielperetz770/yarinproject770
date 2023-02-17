@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href= "style/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <title>yarin timer works🌴</title>
+    <style>
+      #clock {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 50px;
+      }
+      #clock button {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+
+       <div align=center class="header">
+         <header id="logo">
+          <img id="logo"src="https://www.rt-ltd.com/wp-content/uploads/2016/05/logo_rt.png"alt="logoout"style="width:90%;height:250px;">
+         </header>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+         <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.18169-9/26907564_1948096695218909_1641230739977945635_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=19026a&_nc_ohc=9HSIRDXlcEwAX_iqRWJ&_nc_ht=scontent.ftlv1-1.fna&oh=00_AfCbQtMlu8ynmwaz1KZ-v4Eibg0V_sz-D-zIz6CoxiTOvw&oe=64171C44"alt="logoout"href="yarin_new_index.html"style="width:50px;height:auto;px;"></a>
+
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav" style="width:100%">
+           <li class="nav-item" style="width:100%" align="center">
+              <a class="nav-link" href="#">Daniel peretz</a>
+           </li>
+            <li class="nav-item" style="width:100%" align="center">
+              <a class="nav-link" href="#">רואי בניטה</a>
+            </li>
+             <li class="nav-item" style="width:100%" align="center">
+              <a class="nav-link" href="#">ירין בניטה</a>
+             </li>
+              <li class="nav-item" style="width:100%" align="center">
+               <a class="nav-link" href="#">Yossi benita</a>
+            </li>
+             <li class="nav-item dropdown"style=width;100% align=center>
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Our Services</a>
+            
+           <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="#">Planning and building the garden</a></li>
+             <li><a class="dropdown-item" href="#">Garden maintenance</a></li>
+             <li><a class="dropdown-item" href="#">Laying synthetic grass and live grass</a></li>
+             <li><a class="dropdown-item" href="#">>Quality irrigation systems</a></li>
+             <li><a class="dropdown-item" href="#">Garden lighting</a></li>
+             <li><a class="dropdown-item" href="#">ponds</a></li>
+             <li><a class="dropdown-item" href="#">Natural stone flooring</a></li>
+             <li><a class="dropdown-item" href="#">Wooden slats</a></li>
+                   </ul>
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+
+     </nav>
+
+
+
+
+
+    <div id="clock"></div>
+    <button id="clock-in" onclick="clockIn()">Entry to work</button>
+    <button id="clock-out" onclick="clockOut()" disabled>Leaving work</button>
+    <script>
+      var clockInTime = null;
+      var clockOutTime = null;
+      var clockInButton = document.getElementById("clock-in");
+      var clockOutButton = document.getElementById("clock-out");
+
+      function updateClock() {
+        var now = new Date();
+        var date = now.toDateString();
+        var time = now.toLocaleTimeString();
+        var clock = document.getElementById("clock");
+        clock.innerHTML = date + " " + time;
+      }
+
+      function clockIn() {
+        clockInTime = new Date();
+        clockInButton.disabled = true;
+        clockOutButton.disabled = false;
+      }
+
+      function clockOut() {
+        clockOutTime = new Date();
+        var duration = (clockOutTime - clockInTime) / 1000 / 60;
+        alert("You worked for " + duration.toFixed(2) + " minutes.");
+        clockInTime = null;
+        clockOutTime = null;
+        clockInButton.disabled = false;
+        clockOutButton.disabled = true;
+      }
+
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>
